@@ -6,8 +6,9 @@
  */
 
 import React, {useEffect} from 'react';
-import {Alert, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {Alert, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {
+  generateTestCrash,
   // generateTestCrash,
   hasCrashedInLastSession,
   lastSessionCrashReport,
@@ -27,13 +28,22 @@ function App(): JSX.Element {
     }
   };
   return (
-    <TouchableOpacity
-      style={styles.container}
-      onPress={() => {
-        Analytics.trackEvent('My custom event');
-      }}>
-      <Text>CLICK HERE TO CRASH</Text>
-    </TouchableOpacity>
+    <View>
+      <TouchableOpacity
+        style={styles.container}
+        onPress={() => {
+          Analytics.trackEvent('My custom event');
+        }}>
+        <Text>CLICK HERE FOR EVENT</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.container}
+        onPress={() => {
+          generateTestCrash();
+        }}>
+        <Text>CLICK HERE FOR CRASH</Text>
+      </TouchableOpacity>
+    </View>
   );
 }
 
