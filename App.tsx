@@ -33,6 +33,7 @@ function App(): JSX.Element {
         Analytics.trackEvent('My custom event');
       }}>
       <Text>CLICK HERE TO CRASH</Text>
+      <Text>Change 1</Text>
     </TouchableOpacity>
   );
 }
