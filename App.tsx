@@ -42,6 +42,7 @@ function App(): JSX.Element {
           generateTestCrash();
         }}>
         <Text>CLICK HERE FOR CRASH</Text>
+        <Text>Change 1</Text>
       </TouchableOpacity>
     </View>
   );
