@@ -44,6 +44,7 @@ function App(): JSX.Element {
         <Text>CLICK HERE FOR CRASH</Text>
         <Text>Change 1</Text>
         <Text>Change 2</Text>
+        <Text>Change 2</Text>
       </TouchableOpacity>
     </View>
   );
